@@ -14,4 +14,4 @@ print("Temperature in farhenheit:", farhenheit)
 #     Temperature in farhenheit: 32.0
 
 # Additional Comments:
-#       None
+#       make code cleaner

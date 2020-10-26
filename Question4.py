@@ -25,8 +25,7 @@ else:
 
 
 # Additional Comments:-
-# I have used formatted strings, but you can do it in a way that you're comfortable. Check next line...
-# print(year,"is a leap year")   and   print(year,"is not a leap year")
+# I have used formatted strings, but you can do it in a way that you're comfortable.
 
 
 

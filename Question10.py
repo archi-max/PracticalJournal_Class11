@@ -25,13 +25,9 @@ print(f'Quotient of {num1} and {num2} is {divide_num}')
     # For example - print('Sum of ',num1 ,'and ',num2 ,'is ',sum_num.)
 
 # OUTPUT :-
-#Enter a number: 4
+# Enter a number: 4
 # Enter a number: 2
 # Sum of 4 and 2 is 6
 # Difference of 4 and 2 is 2
 # Product of 4 and 2 is 8
 # Quotient of 4 and 2 is 2.0
-
-
-
-

@@ -1,8 +1,8 @@
-# Question:
+# Question
 
 # WAP to find area of a triangle using Heron's Formula
 
-# Code:
+# CODE:
 
 # First we specify variables for sides of triangle
 # I have used 'float' here because side values can be decimal

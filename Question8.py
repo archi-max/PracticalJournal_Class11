@@ -7,9 +7,9 @@
 
 
 eq = input("Quadratic equation in form of ax^2 + bx + c:\n")
-a = ''
-b = ''
-c = ''
+a = 0
+b = 0
+c = 0
 
 
 
@@ -17,43 +17,48 @@ c = ''
 while eq.find("x^2") == -1:
     eq = input("Please enter correct quadratic equation(x^2 not found):\n")
 else:
-    tmp = '' #record character being processed
-    for x in eq[:eq.find("x^2")][::-1]:#[len(eq) - eq.find("x^2"):]: #basically loop all characters before x^2 in reverse direction
-        tmp += x
-        if x == " ": continue
-        # print(x, end="")
-        a += x
-        if x == "+" or x == "-": break
-    # eq = eq.replace('x^2', '')
-    tmp = tmp[::-1]
-    eq = eq.replace(tmp+'x^2','') #remove processed characters
-    if a != '':
-        a = int(a[::-1])
-    else:
-        a = 1
-    print("a:",a)
+    for _ in range(eq.count("x^2")):
+        tmp_a = ''
+        tmp = ''  # record character being processed
+        for x in eq[:eq.find("x^2")][
+                 ::-1]:  # [len(eq) - eq.find("x^2"):]: #basically loop all characters before x^2 in reverse direction
+            tmp += x
+            if x == " ": continue
+            # print(x, end="")
+            tmp_a += x
+            if x == "+" or x == "-": break
+        # eq = eq.replace('x^2', '')
+        tmp = tmp[::-1]
+        eq = eq.replace(tmp + 'x^2', '', 1)  # remove processed characters
+        if tmp_a.strip()[::-1] not in ['','+','-']:
+            a += int(tmp_a[::-1])
+        else:
+            a += int(tmp_a[::-1]+'1')
+    print("a:", a)
 print("eq:",eq)
 
 #try to get correct equation as no proper x value found. NOTE: this assumes that a won't change
 while eq.find("x") == -1:
     eq = input("Please enter correct quadratic equation. x not found:\n")
 else:
-    tmp = ''
-    for x in eq[:eq.find("x")][::-1]:#[len(eq) - eq.find("x"):]:
-        tmp += x
-        if x == " ": continue
-        b += x
-        if x == "+" or x == "-": break
-    # eq = eq.replace('x', '')
-    tmp = tmp[::-1]
-    print("tmpx",tmp+'x')
-    eq = eq.replace(tmp+'x', '')
-    if b != '':
-        print("b:", b[::-1])
-        b = int(b[::-1])
-    else:
-        b = 1
-    print("b:",b)
+    for _ in range(eq.count("x")):
+        tmp = ''
+        tmp_b = ''
+        for x in eq[:eq.find("x")][::-1]:  # [len(eq) - eq.find("x"):]:
+            tmp += x
+            if x == " ": continue
+            tmp_b += x
+            if x == "+" or x == "-": break
+        # eq = eq.replace('x', '')
+        tmp = tmp[::-1]
+        print("tmpx", tmp + 'x')
+        eq = eq.replace(tmp + 'x', '')
+        if tmp_b.strip()[::-1] not in ['','+','-']:
+            # print("b:", tmp_b[::-1])
+            b += int(tmp_b[::-1])
+        else:
+            b += int(tmp_b[::-1] + '1')
+    print("b:", b)
 
 print("eq:",eq)
 # eq = eq.replace("+","")
@@ -61,7 +66,7 @@ eq = eq.replace(" ","")
 
 
 try:
-    c = int(eq)
+    c = eval(eq)
     print("c:",c)
 except:
     print("invalid equation!")

@@ -5,7 +5,6 @@
 # Code:
 
 
-#Inputs
 principal = float(input("Please enter the principal amount:\n"))
 rate = float(input("Please enter the rate of interest:\n"))
 simple_interest = input("Please enter y if simple interest else type n:\n")  # Yes or no if simple interest or compund simple_interest

@@ -5,7 +5,7 @@
 
 types = ["circle", "square", "rectangle", "triangle"]
 
-print("-"*15) # 15 is length of Area Calculator. not intentional though it was a random runmber
+print("-"*15) # 15 is length of Area Calculator. not intentional though it was a random rumber
 print("Area Calculator")
 print("-"*15)
 print()

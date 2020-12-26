@@ -1,0 +1,51 @@
+# Question 
+
+# WAP to read two strings and perform concatenation and comparsion operations on it
+
+# Code
+
+# We ask the user for two strings
+str1 = str(input("Enter sentence: "))
+str2 = str(input("Enter sentence: "))
+
+# We ask the user if they want to concatenate or compare the strings
+userFunction = str(input("Concatenate or Compare: ")).lower()
+
+# We use if and else statement for performing concatenation and comparison
+if userFunction == 'concatenate':
+
+    # We create a list which will contain the two strings given by the user
+    combinedStrings = []
+    
+    # We add the strings entered by the user into this new list
+    combinedStrings.append(str1)
+    combinedStrings.append(str2)
+    
+    # Display the list
+    print(combinedStrings)
+
+elif userFunction == 'compare':
+    
+    # We will create two lists here that will store the characters of each string respectively and will compare them on that basis
+    letters1 = []
+    letters2 = []
+
+    # Using for loop, we will append each character of string 1 and 2 into their own lists respesctively
+    for letter in str1:
+        letters1.append(letter)
+    for letters in str2:
+        letters2.append(letters)
+    
+    # Now we will use if statement to say that if the elements of each list is same, then the strings are equal otherwise they aren't equal
+    if letters1 == letters2:
+        print("Strings are same")
+    else:
+        print("Strings are different")
+
+# By chance, if user enters something wrong
+else:
+    print("invalid")
+
+# That's it, you're done
+
+# ADDTIONAL COMMENTS : NONE

@@ -35,7 +35,7 @@ while True:
     if to_do_action == 'add element':
         ml.append(input("element:\n"))
     elif to_do_action == 'delete element':
-        del ml[int(input("Please enter the index of the element to delete:\n"))]
+        del ml[int(input("Please enter the index of the element to delete:\n"))] # TODO: Add a try and error condition in case entered number is not in the range of list
     elif to_do_action == 'display list':
         print(ml)
     elif to_do_action == 'modify element':

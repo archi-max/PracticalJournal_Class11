@@ -11,8 +11,8 @@ marks = (
 )
 
 for i, x in enumerate(marks):
-    print(f"Total marks for subject {i + 1}:",sum(x))
-    print(f"Average marks for subject {i + 1}:", sum(x)/len(x))
+    print(f"Total marks for student {i + 1}:",sum(x))
+    print(f"Average marks for student {i + 1}:", sum(x)/len(x))
 
 # Input
 #   Total marks for subject 1: 224

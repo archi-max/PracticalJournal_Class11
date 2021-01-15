@@ -19,11 +19,11 @@ given_range=range(101,999)
 nums=random.choices(given_range,k=6)
 
 # Finding the mode
-print(statistics.mode(nums))
+print("mode",statistics.mode(nums))
 # Finding the mean
-print(statistics.mean(nums))
+print("mean",statistics.mean(nums))
 # Finding the median
-print(statistics.median(nums))
+print("median",statistics.median(nums))
 
 # No additional comments
 

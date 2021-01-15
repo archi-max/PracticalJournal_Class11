@@ -7,7 +7,7 @@ tp = {(2,5),(4,2),(9,8),(12,10)}
 nl = []
 
 for tup in tp: nl.append(tup) if (tup[0]%2==0 and tup[1]%2==0) else None
-print(nl)
+print(len(nl), "tuples are even")
 
 # Input
 
